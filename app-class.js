@@ -6,17 +6,16 @@ import HelloWorld from 'hello-word';
 angular.module('plunker').component('appClass', {
   bindings: {},
   require: {
-    tabsCtrl: '^myTabs'
+    helloWorldCtrl: '^helloWorld'
   },
   controller: function() {
     this.$onInit = function () {
-      this.name = 'Andreas';
+      this.name = 'Hello World';
     };
-    this.foo = function (param1, param2) {
-      console.log('foo');
-      this.name = 'foo';
+    this.myAction = function (param1, param2) {
+      this.name = 'Dummy';
       this.oneWay = 'b';
     };
   },
-  template: '<hello-world ng-if="toggle" name="{{$ctrl.name}}"></hello-world><button ng-click=$ctrl.foo()>a</button></div><br><button ng-click="toggle = !toggle">Toggle</button>'
+  template: '<hello-world ng-if="toggle" name="{{$ctrl.name}}"></hello-world><button ng-click=$ctrl.myAction()>a</button></div><br><button ng-click="toggle = !toggle">Toggle</button>'
 });

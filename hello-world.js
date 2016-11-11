@@ -1,6 +1,7 @@
 'use strict';
 
 import angular from 'angular';
+import HelloWorld from 'hero-detail';
 
 angular.module('plunker').component('helloWorld', {
   bindings: {
