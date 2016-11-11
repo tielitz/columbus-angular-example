@@ -4,7 +4,9 @@ import angular from 'angular';
 import HelloWorld from 'hello-word';
 
 angular.module('plunker').component('appClass', {
-  bindings: {},
+  bindings: {
+    name: '@'
+  },
   require: {
     helloWorldCtrl: '^helloWorld'
   },
