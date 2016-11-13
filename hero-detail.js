@@ -18,6 +18,8 @@ angular.module('plunker').component('heroDetail', {
     }
   ];
 
+  parent.parentProperty = 'Test';
+
   ctrl.delete = function() {
     ctrl.onDelete({hero: ctrl.hero});
   };
