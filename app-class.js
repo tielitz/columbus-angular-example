@@ -1,23 +1,23 @@
 'use strict';
 
 import angular from 'angular';
-import HelloWorld from 'hello-word';
+import HelloAngular from 'hello-angular';
 
-angular.module('plunker').component('appClass', {
+angular.module('helloWorld').component('appClass', {
   bindings: {
     name: '@'
   },
   require: {
-    helloWorldCtrl: '^helloWorld'
+    helloAngularCtrl: '^helloAngular'
   },
   controller: function() {
     this.$onInit = function () {
-      this.name = 'Hello World';
+      this.name = 'Hello Angular';
     };
     this.myAction = function (param1, param2) {
       this.name = 'Dummy';
       this.oneWay = 'b';
     };
   },
-  template: '<hello-world ng-if="toggle" name="{{$ctrl.name}}"></hello-world><button ng-click=$ctrl.myAction()>a</button></div><br><button ng-click="toggle = !toggle">Toggle</button>'
+  template: '<hello-angular ng-if="toggle" name="{{$ctrl.name}}"></hello-angular><button ng-click=$ctrl.myAction()>a</button></div><br><button ng-click="toggle = !toggle">Toggle</button>'
 });

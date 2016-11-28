@@ -2,7 +2,7 @@
 
 import angular from 'angular';
 
-angular.module('plunker').component('heroDetail', {
+angular.module('helloWorld').component('heroDetail', {
   templateUrl: 'heroDetail.html',
   controller: function () {
   var ctrl = this;

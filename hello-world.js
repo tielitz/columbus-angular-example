@@ -1,9 +1,9 @@
 'use strict';
 
 import angular from 'angular';
-import HelloWorld from 'hero-detail';
+import HeroDetail from 'hero-detail';
 
-angular.module('plunker').component('helloWorld', {
+angular.module('helloWorld').component('helloAngular', {
   bindings: {
     name: '@',
     oneWay: '<',
@@ -27,5 +27,4 @@ angular.module('plunker').component('helloWorld', {
     };
   },
   template: '<div>{{ $ctrl.sayHello() }}, {{ $ctrl.name }}!'
-  // templateUrl: 'heroDetail.html',
 });
